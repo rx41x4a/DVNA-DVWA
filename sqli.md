@@ -13,7 +13,7 @@
 
 ## The fix
 
-```
+```nodejs
 module.exports.userSearch = function (req, res) {
 //Comment out the following lines 
 	//var query = "SELECT name,id FROM Users WHERE login='" + req.body.login + "'";
