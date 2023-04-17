@@ -94,9 +94,10 @@ const execFile = require('child_process').execFile;
 ```
 
 Then 
-```
+```js
 // Remove/Replace the line 
 exec('ping -c 2 ' + req.body.address, function (err, stdout, stderr) {
+
 // Add the line
 execFile('ping', ['-c', '2', req.body.address] , function(err,stdout,stderr){
 ```
