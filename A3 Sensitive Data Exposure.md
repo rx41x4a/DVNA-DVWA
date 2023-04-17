@@ -1,6 +1,6 @@
 # Fix
 
-## Edits to the `core/appHandler.js`
+#### Edits to the `core/appHandler.js`
 
 
 ```
