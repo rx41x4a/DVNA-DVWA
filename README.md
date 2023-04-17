@@ -3,5 +3,10 @@ Notes for DVNA
 
 ## Stard the DVNA application 
 ```
-docker run -p 9090:9090 -d appsecco/dvna:sqlite
+docker-compose up
 ```
+
+## Remote edit DVNA with VSCode
+
+- Install "Remote Development" extention for VSCode
+- Use ssh and select the remote file to edit
