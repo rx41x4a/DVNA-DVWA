@@ -1,5 +1,6 @@
 # Fix
 
+### Hashed Passwords Disclosed
 #### Edits to the `core/appHandler.js`
 
 
@@ -10,4 +11,16 @@ db.User.findAll({}).then(users => {
 // Add following to only get required non-sensitive data
 db.User.findAll({attributes: [ 'id' ,'name', 'email']}).then(users => {
 		
+```
+
+---
+
+### Logging of sensitive information
+#### Edits to the `models/index.js`
+
+```js
+// Add a semi semicolon
+dialect: config.dialect,
+// Add the new line to make logging false
+logging: false
 ```
