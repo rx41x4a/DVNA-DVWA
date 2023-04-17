@@ -3,7 +3,7 @@
 #### Edits to the `core/appHandler.js`
 
 
-```
+```js
 // Remove the code that sends entire user object
 db.User.findAll({}).then(users => {
 
