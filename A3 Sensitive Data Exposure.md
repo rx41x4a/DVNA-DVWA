@@ -19,7 +19,7 @@ db.User.findAll({attributes: [ 'id' ,'name', 'email']}).then(users => {
 #### Edits to the `models/index.js`
 
 ```js
-// Add a semi semicolon
+// Add a semi semicolon to the end of following line 
 dialect: config.dialect,
 // Add the new line to make logging false
 logging: false
