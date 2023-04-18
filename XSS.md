@@ -17,7 +17,7 @@
 
 Changes to ` package.json`
 ```js
-# Add a colon
+# Add a colon to following line (because we want to continue and add another line)
 "sequelize": "^4.13.10",
 
 # Add the package 
