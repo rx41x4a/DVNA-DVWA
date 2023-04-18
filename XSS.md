@@ -48,7 +48,7 @@ Listing products with <strong>search query: </strong> <%= output.searchTerm %>
                 <td><%- output.products[i].tags %></td>
                 <td><%- output.products[i].description %></td>
           */
-          # Add the following
+          // Add the following
                 <td><%= output.products[i].id %></td>
                 <td><%= output.products[i].name %></td>
                 <td><%= output.products[i].code %></td>
