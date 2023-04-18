@@ -10,12 +10,12 @@ cos.constructor("spawn_sync = process.binding('spawn_sync'); normalizeSpawnArgum
 ---
 
 Change the `package.js` to the fixed version 
-```
+```js
 // Remove
 "mathjs": "3.10.1",
  
  // Add
- "mathjs": "^3.17.0",
+"mathjs": "^3.17.0",
 ```
 
 
