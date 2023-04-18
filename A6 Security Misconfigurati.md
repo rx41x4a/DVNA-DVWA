@@ -2,7 +2,7 @@
 
 Replace the `module.exports.calc` funcion 
 
-```
+```js
 module.exports.calc = function (req, res) {
 	//if (req.body.eqn) {
 	//	res.render('app/calc', {
