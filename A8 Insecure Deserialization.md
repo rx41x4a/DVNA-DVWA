@@ -15,6 +15,13 @@ var y = {
 }
 ```
 
+The attack is not visilble from front end because the commands we execute visible only with logs. 
+Therefore, We need to SSH to the VM and see docker logs 
+```
+docker-compose logs
+```
+
+
 
 ## Fix
 ---
