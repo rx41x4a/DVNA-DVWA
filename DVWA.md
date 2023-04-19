@@ -39,6 +39,7 @@ python ./sqlmap.py -u "http://161.35.202.77/vulnerabilities/sqli/?id=1&Submit=Su
 
 
 ## Bling SQL injection 
+---
 
 ##### Finding blind sqli (boolien based)
 ```sql
