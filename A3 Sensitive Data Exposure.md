@@ -1,15 +1,14 @@
 # Sensitive Data Exposure 
 
 ## Vulnerability
-~~~
-The Admin API endpoint at `app/admin/api/users` sends the entire user object to the front end.
-~~~
+
+###### Hashed Passwords Disclosed. The Admin API endpoint at `app/admin/api/users` sends the entire user object to the front end including password hash.
+
 
 ---
 
 ## Fix
 
-### Hashed Passwords Disclosed
 #### Edits to the `core/appHandler.js`
 
 
