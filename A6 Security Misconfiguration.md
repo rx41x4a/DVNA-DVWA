@@ -1,6 +1,12 @@
-## Fix
+# Security Misconfiguration
+
+## Vulnerability
 
 The application was running in DEVELOPMENT mode and due to lack of error handling, it sent the stack trace with internal file locations and other potentially sensitive information.
+
+
+---
+## Fix
 
 Replace the `module.exports.calc` funcion 
 
