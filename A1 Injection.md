@@ -35,7 +35,9 @@ On the other hand, if the second parameter is not an object, or if it is an obje
 
 
 <br>
+
 ---
+
 ## The fix
 
 We can use `model's` `find` function and rely on in-built input sanitization of sequelize.
