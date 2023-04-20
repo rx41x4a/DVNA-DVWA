@@ -1,7 +1,7 @@
 # DVNA
 Notes for DVNA
 
-## Stard the DVNA application 
+## Start the DVNA application 
 ```
 docker-compose up
 ```
