@@ -2,8 +2,9 @@
 
 ## Vulnerability
 
-###### Hashed Passwords Disclosed. The Admin API endpoint at `app/admin/api/users` sends the entire user object to the front end including password hash.
+Hashed Passwords Disclosed. The Admin API endpoint at `app/admin/api/users` sends the entire user object to the front end including password hash.
 
+<br><br>
 
 ---
 
