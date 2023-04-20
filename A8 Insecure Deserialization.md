@@ -1,4 +1,9 @@
 
+## Vulnerability 
+
+The Legacy `Bulk Import` feature does not securely deserialize the data. 
+
+
 ## Exploitation 
 
 Json to exploit the vulnerability 
@@ -20,6 +25,9 @@ Therefore, We need to SSH to the VM and see docker logs
 ```
 docker-compose logs
 ```
+
+
+
 
 
 
