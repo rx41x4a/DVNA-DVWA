@@ -34,8 +34,8 @@ On the other hand, if the second parameter is not an object, or if it is an obje
 ![image](https://user-images.githubusercontent.com/120215854/233464100-51b4295b-3303-4966-9574-53301f8906e8.png)
 
 
-
-
+<br>
+---
 ## The fix
 
 We can use `model's` `find` function and rely on in-built input sanitization of sequelize.
