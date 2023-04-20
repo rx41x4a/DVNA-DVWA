@@ -12,7 +12,33 @@
 ```
 
 
+---
+## The Vulnerability 
+~~~
+No input validation or sanitization for user controlled inputs
+~~~
+
+`db.sequelize.query` is a method in the Sequelize ORM (Object-Relational Mapping) library for Node.js that can be used to execute raw SQL queries against a database.
+
+By default, db.sequelize.query will use parameterized queries, meaning that any input values will be automatically escaped and treated as parameters rather than being concatenated into the SQL string. This helps to prevent SQL injection attacks and makes the query more efficient, as the database can cache the execution plan for the query.
+
+However, it is possible to disable parameterization and use raw SQL queries by passing the `raw: true` option to the db.sequelize.query method. In this case, you should be careful to manually escape any input values to prevent SQL injection vulnerabilities.
+
+
+You can check if the raw option is set to true or not by looking at the second parameter of the db.sequelize.query method.
+
+If the second parameter is an object that contains a raw property set to true, then the query is a raw SQL query. For example:
+![image](https://user-images.githubusercontent.com/120215854/233464025-25a66d2b-685f-4b6f-bb59-1ab16c589e38.png)
+
+On the other hand, if the second parameter is not an object, or if it is an object that does not contain a raw property set to true, then the query is a parameterized query. For example:
+![image](https://user-images.githubusercontent.com/120215854/233464100-51b4295b-3303-4966-9574-53301f8906e8.png)
+
+
+
+
 ## The fix
+
+We can use `model's` `find` function and rely on in-built input sanitization of sequelize.
 
 ### Edits to the `core\appHandler.js`
 
