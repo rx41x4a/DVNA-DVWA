@@ -111,6 +111,13 @@ nc -nlvp 4444
 ```
 
 
+### Vulnerability 
+
+~~~
+'exec' method can execute arbitrary OS commands
+~~~
+
+
 ### The fix
 
 ~~~
